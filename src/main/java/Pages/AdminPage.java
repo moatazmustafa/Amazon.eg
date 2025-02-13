@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -21,12 +22,12 @@ public class AdminPage extends BasePage {
     public void login(String username, String password) {
         sendKeys(usernameField, username);
         sendKeys(passwordField, password);
-        click(loginButton);
+        Utility.clickingOnElement(driver,loginButton);
     }
 
     public void navigateToOtpTab() {
-        click(oceanTab);
-        click(otpTab);
+        Utility.clickingOnElement(driver,oceanTab);
+        Utility.clickingOnElement(driver,otpTab);
     }
 
     public String getOtp() {
@@ -34,7 +35,7 @@ public class AdminPage extends BasePage {
     }
 
     public void navigateToCustomersTab() {
-        click(customersTab);
-        click(allCustomersTab);
+        Utility.clickingOnElement(driver,customersTab);
+        Utility.clickingOnElement(driver,allCustomersTab);
     }
 }
