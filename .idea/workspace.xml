@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="882e7079-209a-4237-8d20-dec7e3214658" name="Changes" comment="" />
+    <list default="true" id="882e7079-209a-4237-8d20-dec7e3214658" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,15 +24,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.RegistrationTest.executor": "Run",
-    "TestNG.WebWishListTest.executor": "Run",
-    "git-widget-placeholder": "RT-521-SS-Registration",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.RegistrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebWishListTest.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RT-521-SS-Registration&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="TestNG.RegistrationTest">
     <configuration name="Price2SpyNewTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="PaymentMethod.Tests" />
