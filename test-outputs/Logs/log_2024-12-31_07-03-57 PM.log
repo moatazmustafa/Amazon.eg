@@ -1,1 +1,0 @@
-[ERROR] 31-12-2024 19:03:57 [main] [Utilities.Utility.clickingOnElement(Utility.java:29)] - Element not clickable within timeout: By.xpath: //a[@class='level-1']//span[text()='All Customers']

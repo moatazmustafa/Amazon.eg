@@ -20,13 +20,17 @@ public class AdminPage extends BasePage {
     }
 
     public void login(String username, String password) {
-        sendKeys(usernameField, username);
-        sendKeys(passwordField, password);
+        Utility.sendData(driver,usernameField, username);
+        Utility.sendData(driver,passwordField, password);
+//        sendKeys(usernameField, username);
+//        sendKeys(passwordField, password);
         Utility.clickingOnElement(driver,loginButton);
     }
 
-    public void navigateToOtpTab() {
+    public void navigateToOceanTab() {
         Utility.clickingOnElement(driver,oceanTab);
+    }
+    public void navigateToOtpTab() {
         Utility.clickingOnElement(driver,otpTab);
     }
 

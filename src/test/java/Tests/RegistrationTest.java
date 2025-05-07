@@ -16,7 +16,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class RegistrationTest {
+public class RegistrationTest extends BasePage{
     private static final Logger log = LoggerFactory.getLogger(RegistrationTest.class);
 
     WebDriver driver;
@@ -25,25 +25,23 @@ public class RegistrationTest {
 
     @BeforeTest
     public void prepare() {
-        // Set up WebDriver
         WebDriverManager.chromedriver().setup();
 
-        // Configure ChromeOptions for Incognito Mode //
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--window-size=1920,1080");
-
         options.addArguments("--no-sandbox");
+        options.addArguments("--disable-blink-features=AutomationControlled");
+        options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-gpu");
-        options.addArguments("--remote-allow-origins=*"); // Fix potential CORS issues
+        options.addArguments("--remote-allow-origins=*");
         options.addArguments("--disable-extensions");
-        // options.addArguments("--incognito"); // Enable incognito mode
-        options.addArguments("--start-maximized"); // Start maximized
-        options.addArguments("--disable-cache"); // Disable caching
-        driver = new ChromeDriver(options); // Initialize driver with options
+        options.addArguments("--start-maximized");
+        options.addArguments("--disable-cache");
+        options.addArguments("--incognito"); // Enable incognito mode
 
-        // Clear cookies explicitly (if needed)
+        driver = new ChromeDriver(options);
         driver.manage().deleteAllCookies();
 
         // Initialize Page Objects
@@ -53,7 +51,7 @@ public class RegistrationTest {
     }
 
     @AfterTest
-    public void shutdown() {
+    public void teardown() {
         if (driver != null) {
             driver.quit();
         }
@@ -84,9 +82,11 @@ public class RegistrationTest {
         driver.switchTo().window((String) windowHandles[1]);
         driver.get("https://www.raneen.com/admin/admin/");
         log.info("Logging in to Admin Portal");
-        adminPage.login("motaz.mostafa", "mm@123456");
+        adminPage.login("moatazz.mustafa", "mm@123456");
         log.info("Navigating to Ocean OTP Tab");
+        adminPage.navigateToOceanTab();
         adminPage.navigateToOtpTab();
+        Utility.findWebElement(driver,By.xpath("//tbody/tr/td[3]")); // find otp value
         log.info("Getting OTP");
         String otp = adminPage.getOtp();
 
@@ -105,12 +105,12 @@ public class RegistrationTest {
         // Step 4: Verify Registration in Admin Portal
         log.info("Switch To Admin Portal");
         driver.switchTo().window((String) windowHandles[1]);
-        Thread.sleep(5000);
+        Utility.waitForPageToLoad(driver, 10);
         log.info("Navigating To Customers Tab");
         Utility.clickingOnElement(driver, By.xpath("/html/body/div[1]/nav/ul/li[8]/a"));  //customer tab
-        Thread.sleep(3000);
         log.info("Navigating To All Customers Tab");
         Utility.clickingOnElement(driver, By.xpath("/html/body/div[1]/nav/ul/li[8]/div/ul/li[1]/a"));
+        Utility.waitForPageToLoad(driver, 10);
         log.info("Clear Search Field");
         Utility.findWebElement(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[2]/div[1]/div[2]/input")).clear();
         log.info("Enter The Random Phone Number");
@@ -121,10 +121,10 @@ public class RegistrationTest {
         Thread.sleep(5000);
 
         // Open Customer Details
-        Utility.findWebElement(driver, By.xpath("//td[22]/a"));
         Thread.sleep(10000);
+        Utility.findWebElement(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[4]/table/tbody/tr[2]/td[20]/a")); // click on edit
         log.info("Open Customer Details");
-        Utility.clickingOnElement(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[4]/table/tbody/tr[2]/td[22]/a")); // Open customer details
+        Utility.clickingOnElement(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[4]/table/tbody/tr[2]/td[20]/a")); // Open customer details
         Thread.sleep(3000);
         log.info("Delete Customer");
         Utility.clickingOnElement(driver, By.xpath("//button[3]/span")); // Action

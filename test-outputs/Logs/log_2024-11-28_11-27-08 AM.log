@@ -1,2 +1,0 @@
-[INFO] 28-11-2024 11:27:08 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:29)] - Test Case prepare passed
-[INFO] 28-11-2024 11:27:08 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:12)] - Test Case 'open_screen_setup' started

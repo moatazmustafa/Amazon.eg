@@ -17,27 +17,23 @@ import java.time.Duration;
 import java.util.*;
 
 public class Utility {
-    private static final String SCREENSHOTS_PATH = "test-outputs/Screenshots/";
     private static final ThreadLocal<WebDriverWait> threadLocalWait = new ThreadLocal<>();
 
     public static void clickingOnElement(WebDriver driver, By locator) {
         try {
-            new WebDriverWait(driver, Duration.ofSeconds(30))
+            new WebDriverWait(driver, Duration.ofSeconds(40))
                     .until(ExpectedConditions.elementToBeClickable(locator));
             driver.findElement(locator).click();
         } catch (TimeoutException e) {
-            LogsUtils.error("Element not clickable within timeout: " + locator);
+            LogsUtils.error("Failed to click on element. Locator: " + locator);
             throw e;
         }
     }
 
     public static WebElement findWebElement(WebDriver driver, By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-        try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        } catch (TimeoutException e) {
-            throw new RuntimeException("Element not found: " + locator.toString(), e);
-        }
+        new WebDriverWait(driver, Duration.ofSeconds(30))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return driver.findElement(locator);
     }
 
     public static void sendData(WebDriver driver, By locator, String data) {
@@ -67,33 +63,6 @@ public class Utility {
 
     public static String getTimeStamp() {
         return new SimpleDateFormat("yyyy-MM-dd-hh-mm-ssa").format(new Date());
-    }
-
-    public static void takeScreenShot(WebDriver driver, String screenshotName) {
-        try {
-            // Capture screenshot using TakesScreenshot
-            File screenshotSrc = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-            // Save screenshot to a file if needed
-            File screenshotFile = new File(SCREENSHOTS_PATH + screenshotName + "-" + getTimeStamp() + ".png");
-            FileUtils.copyFile(screenshotSrc, screenshotFile);
-
-            // Attach the screenshot to Allure
-            Allure.addAttachment(screenshotName, Files.newInputStream(Path.of(screenshotFile.getPath())));
-        } catch (Exception e) {
-            LogsUtils.error(e.getMessage());
-        }
-    }
-
-    public static void takeFullScreenshot(WebDriver driver, By locator) {
-        try {
-            Shutterbug.shootPage(driver, Capture.FULL_SCROLL)
-                    .highlight(findWebElement(driver, locator))
-                    .save(SCREENSHOTS_PATH);
-        } catch (Exception e) {
-            LogsUtils.error(e.getMessage());
-        }
-
     }
 
     public static int generateRandomNumber(int upperBound) { //0 >> upper-1  > 5
@@ -206,4 +175,3 @@ public class Utility {
     }
 
 }
-

@@ -11,6 +11,9 @@ public class BasePage {
         this.driver = driver;
     }
 
+    public BasePage() {
+    }
+
     public static void openUrl(String url) {
         Utility.openUrl(driver, url);
     }

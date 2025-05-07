@@ -1,1 +1,0 @@
-[INFO] 12-12-2024 14:33:36 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:29)] - Test Case prepare passed

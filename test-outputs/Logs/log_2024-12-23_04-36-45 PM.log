@@ -1,1 +1,0 @@
-[ERROR] 23-12-2024 16:36:45 [main] [Utilities.Utility.clickingOnElement(Utility.java:29)] - Element not clickable within timeout: By.cssSelector: .recaptcha-checkbox-border

@@ -1,3 +1,0 @@
-[INFO] 16-01-2025 18:56:02 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:29)] - Test Case prepare passed
-[INFO] 16-01-2025 18:56:02 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:12)] - Test Case 'testRegistrationFlow' started
-[INFO] 16-01-2025 18:57:28 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:29)] - Test Case testRegistrationFlow passed

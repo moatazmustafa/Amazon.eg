@@ -1,3 +1,4 @@
+
 package Listeners;
 
 import Utilities.LogsUtils;
@@ -14,31 +15,28 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import static DriverFactory.DriverFactory.getDriver;
-
 public class IInvokedMethodListenerClass implements IInvokedMethodListener {
 
-    public void afterInvocation(IInvokedMethod method, @NotNull ITestResult testResult, ITestContext context) {
-        //Utility.takeFullScreenshot(getDriver(), new P02_LandingPage(getDriver()).getNumberOfSelectedProductsOnCart());
-        switch (testResult.getStatus()) {
-            case ITestResult.FAILURE:
-                LogsUtils.info("Test Case " + testResult.getName() + " failed");
-                Utility.takeScreenShot(getDriver(), testResult.getName()); //validLoginTC-2024-03-03-8-17pm
-                break;
-            case ITestResult.SUCCESS:
-                LogsUtils.info("Test Case " + testResult.getName() + " passed");
-                break;
-            case ITestResult.SKIP:
-                LogsUtils.info("Test Case " + testResult.getName() + " skipped");
-                break;
-        }
-        try {
-            File logFile = Utility.getLatestFile(LogsUtils.LOGS_PATH);
-            assert logFile != null;
-            Allure.addAttachment("logs.log", Files.readString(Path.of(logFile.getPath())));
-        } catch (IOException e) {
-            LogsUtils.error(e.getMessage());
+    @Override
+    public void afterInvocation(IInvokedMethod method, @NotNull ITestResult result, ITestContext context) {
+        String testName = result.getName();
+
+        switch (result.getStatus()) {
+            case ITestResult.SUCCESS -> LogsUtils.info("✅ Method passed: " + testName);
+            case ITestResult.FAILURE -> LogsUtils.error("❌ Method failed: " + testName);
+            case ITestResult.SKIP   -> LogsUtils.warn("⚠️ Method skipped: " + testName);
         }
 
+        // Attach latest log file to Allure
+        try {
+            File logFile = Utility.getLatestFile(LogsUtils.LOGS_PATH);
+            if (logFile != null) {
+                Allure.addAttachment("Execution Log", Files.readString(Path.of(logFile.getPath())));
+            } else {
+                LogsUtils.warn("⚠️ No log file found to attach.");
+            }
+        } catch (IOException e) {
+            LogsUtils.error("🚫 Failed to attach log file to Allure: " + e.getMessage());
+        }
     }
 }

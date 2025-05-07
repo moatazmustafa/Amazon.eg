@@ -1,0 +1,5 @@
+[INFO] 07-05-2025 12:13:59 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - ✅ Method passed: prepare
+[INFO] 07-05-2025 12:13:59 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:16)] - ✅ Test started: testRegistrationFlow
+[INFO] 07-05-2025 12:15:19 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - ✅ Method passed: testRegistrationFlow
+[INFO] 07-05-2025 12:15:19 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:21)] - ✅ Test passed: testRegistrationFlow
+[INFO] 07-05-2025 12:15:20 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - ✅ Method passed: teardown

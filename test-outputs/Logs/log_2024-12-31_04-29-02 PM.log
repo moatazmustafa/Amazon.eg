@@ -1,1 +1,0 @@
-[ERROR] 31-12-2024 16:29:02 [main] [Utilities.Utility.takeScreenShot(Utility.java:81)] - Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null

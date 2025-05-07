@@ -1,6 +1,0 @@
-[INFO] 04-12-2024 18:39:43 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:29)] - Test Case prepare passed
-[INFO] 04-12-2024 18:39:44 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:12)] - Test Case 'open_screen_setup' started
-[INFO] 04-12-2024 18:40:19 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - Test Case open_screen_setup failed
-[ERROR] 04-12-2024 18:40:19 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.takeScreenShot(Utility.java:79)] - Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 04-12-2024 18:40:19 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestFailure(ITestResultListenerClass.java:27)] - Test Case 'open_screen_setup' failed
-[INFO] 04-12-2024 18:40:20 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:29)] - Test Case shutdown passed

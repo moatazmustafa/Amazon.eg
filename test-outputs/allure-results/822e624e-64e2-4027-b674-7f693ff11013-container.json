@@ -1,1 +1,0 @@
-{"uuid":"822e624e-64e2-4027-b674-7f693ff11013","name":"raneen-cloud-Jenkins","children":["ae60003b-cf94-41fd-a114-e7753275d9a8"],"befores":[{"name":"prepare","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1732454845571,"stop":1732454847166}],"afters":[],"start":1732454845555,"stop":1732454897887}
