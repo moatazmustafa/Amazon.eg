@@ -1,0 +1,15 @@
+[INFO] 25-05-2025 20:39:03 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: setUp
+[INFO] 25-05-2025 20:39:04 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:14)] - ✅ Test started: testRegistrationFlow
+[ERROR] 25-05-2025 20:40:15 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:49)] - Timeout waiting for element to be clickable: By.xpath: //li[@id='menu-ocean-core-ocean']/a
+[ERROR] 25-05-2025 20:40:15 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - ❌ Method failed: testRegistrationFlow
+[INFO] 25-05-2025 20:40:15 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestFailure(ITestResultListenerClass.java:29)] - ❌ Test failed: testRegistrationFlow
+[ERROR] 25-05-2025 20:40:15 [TestNG-test-Raneen Cloud Tests-1] [Utilities.ScreenShotUtils.takeScreenshotOnFailure(ScreenShotUtils.java:37)] - ❌ Unexpected error while capturing screenshot: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=137.0.7151.41)
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bb7c4ab37ac1962bf50927cd2b0c39a9, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\MOTAZ~1.MOS\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49501}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49501/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bb7c4ab37ac1962bf50927cd2b0c39a9
+[INFO] 25-05-2025 20:40:15 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown
