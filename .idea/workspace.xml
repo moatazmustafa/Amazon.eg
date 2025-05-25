@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="882e7079-209a-4237-8d20-dec7e3214658" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/AdminPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/SSRegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/SSRegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/SellAtRaneenPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/SellAtRaneenPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/WebHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/WebHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/LogsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/LogsUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/ScreenShotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/ScreenShotUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/allure.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Listeners/IInvokedMethodListenerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Listeners/IInvokedMethodListenerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Listeners/ITestResultListenerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Listeners/ITestResultListenerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/TestData/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestData/environment.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-outputs/Logs/log_2025-05-06_07-29-49 PM.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-outputs/Logs/log_2025-05-07_11-37-13 AM.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-outputs/Logs/log_2025-05-07_12-13-59 PM.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-outputs/Logs/log_2025-05-07_12-15-43 PM.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-outputs/Logs/log_2025-05-07_12-17-25 PM.log" beforeDir="false" />
-    </list>
+    <list default="true" id="882e7079-209a-4237-8d20-dec7e3214658" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -24,7 +24,7 @@ public abstract class BaseTest {
         ChromeOptions options = new ChromeOptions();
 
         // Uncomment for Jenkins/CI runs
-      //  options.addArguments("--headless=new");  // Modern headless mode
+        options.addArguments("--headless=new");  // Modern headless mode
 
         // Common options for stable execution
         options.addArguments("--window-size=1920,1080");
