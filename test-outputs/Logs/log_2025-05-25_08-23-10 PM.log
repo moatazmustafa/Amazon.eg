@@ -1,0 +1,18 @@
+[INFO] 25-05-2025 20:23:10 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: setUp
+[INFO] 25-05-2025 20:23:10 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:14)] - ✅ Test started: testRegistrationFlow
+[INFO] 25-05-2025 20:23:20 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.xpath: /html/body/div[2]/main/div[4]/div/div[2]/form/div[5]/div/button
+[INFO] 25-05-2025 20:23:21 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.cssSelector: #smartstore-phone > button
+[INFO] 25-05-2025 20:23:38 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.xpath: //form[@id='login-form']/fieldset/div[3]/div/button/span
+[INFO] 25-05-2025 20:23:39 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.xpath: //li[@id='menu-ocean-core-ocean']/a
+[INFO] 25-05-2025 20:23:42 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.xpath: //li[@id='menu-ocean-core-ocean']/div/ul/li[2]/ul/li/div/ul/li[4]/a/span
+[INFO] 25-05-2025 20:23:43 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.cssSelector: #smartstore-register > button
+[INFO] 25-05-2025 20:23:44 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.xpath: /html/body/div[1]/nav/ul/li[8]/a
+[INFO] 25-05-2025 20:23:53 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.xpath: /html/body/div[1]/nav/ul/li[8]/div/ul/li[1]/a
+[WARN] 25-05-2025 20:23:56 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:38)] - StaleElementReferenceException on attempt 1 for: By.xpath: //div[2]/div/div[2]/button. Retrying...
+[INFO] 25-05-2025 20:24:06 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 2): By.xpath: //div[2]/div/div[2]/button
+[INFO] 25-05-2025 20:24:22 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.xpath: /html/body/div[2]/main/div[2]/div/div/div[2]/div[4]/table/tbody/tr[2]/td[20]/a
+[INFO] 25-05-2025 20:24:23 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.xpath: //button[3]/span
+[INFO] 25-05-2025 20:24:34 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Successfully clicked element (Attempt 1): By.xpath: //footer/button[2]/span
+[INFO] 25-05-2025 20:24:34 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: testRegistrationFlow
+[INFO] 25-05-2025 20:24:34 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:19)] - ✅ Test passed: testRegistrationFlow
+[INFO] 25-05-2025 20:24:35 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown

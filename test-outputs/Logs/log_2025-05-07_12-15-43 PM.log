@@ -1,6 +1,0 @@
-[INFO] 07-05-2025 12:15:44 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - ✅ Method passed: prepare
-[INFO] 07-05-2025 12:15:44 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:16)] - ✅ Test started: testRegistrationFlow
-[ERROR] 07-05-2025 12:16:19 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:26)] - ❌ Method failed: testRegistrationFlow
-[ERROR] 07-05-2025 12:16:19 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestFailure(ITestResultListenerClass.java:31)] - ❌ Test failed: testRegistrationFlow
-[ERROR] 07-05-2025 12:16:20 [TestNG-test-Raneen Cloud Tests-1] [Utilities.ScreenShotUtils.takeScreenshotOnFailure(ScreenShotUtils.java:30)] - 📸 Screenshot saved: test-outputs/Screenshots/testRegistrationFlow_20250507_121619.png
-[INFO] 07-05-2025 12:16:21 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - ✅ Method passed: teardown

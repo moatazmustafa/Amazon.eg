@@ -1,45 +1,138 @@
 package Utilities;
 
-import com.assertthat.selenium_shutterbug.core.Capture;
-import com.assertthat.selenium_shutterbug.core.Shutterbug;
-import io.qameta.allure.Allure;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.*;
 
 public class Utility {
-    private static final ThreadLocal<WebDriverWait> threadLocalWait = new ThreadLocal<>();
 
+    // Default timeouts and retry settings
+    private static final int DEFAULT_TIMEOUT = 10;
+    private static final int DEFAULT_MAX_RETRIES = 15;
+
+    /**
+     * Click on an element with retry logic and proper waits
+     * @param driver WebDriver instance
+     * @param locator By locator for the element
+     */
     public static void clickingOnElement(WebDriver driver, By locator) {
+        final int maxRetries = DEFAULT_MAX_RETRIES;
+
+        for (int attempt = 1; attempt <= maxRetries; attempt++) {
+            try {
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+                WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+
+                scrollToElement(driver, locator);
+                element.click();
+                return; // Success
+            } catch (StaleElementReferenceException | ElementClickInterceptedException e) {
+                if (attempt == maxRetries) {
+                    throw e;
+                }
+
+                try {
+                    Thread.sleep(10000); // Wait before next retry
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt(); // Restore interrupted status
+                    LogsUtils.error("Retry sleep interrupted.");
+                    throw new RuntimeException("Retry sleep interrupted", ie);
+                }
+
+            } catch (TimeoutException e) {
+                LogsUtils.error("Timeout waiting for element to be clickable: " + locator);
+                throw e;
+            } catch (Exception e) {
+                LogsUtils.error("Unexpected error clicking element: " + e.getMessage());
+                throw e;
+            }
+        }
+    }
+
+
+    /**
+     * Find a WebElement with proper waits
+     * @param driver WebDriver instance
+     * @param locator By locator for the element
+     * @return WebElement if found
+     */
+    public static WebElement findWebElement(WebDriver driver, By locator) {
         try {
-            new WebDriverWait(driver, Duration.ofSeconds(40))
-                    .until(ExpectedConditions.elementToBeClickable(locator));
-            driver.findElement(locator).click();
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            return element;
         } catch (TimeoutException e) {
-            LogsUtils.error("Failed to click on element. Locator: " + locator);
+            throw e;
+        } catch (Exception e) {
+            LogsUtils.error("Error finding element: " + locator + " - " + e.getMessage());
             throw e;
         }
     }
 
-    public static WebElement findWebElement(WebDriver driver, By locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(30))
-                .until(ExpectedConditions.visibilityOfElementLocated(locator));
-        return driver.findElement(locator);
+    /**
+     * Type text into an input field with clear and validation
+     * @param driver WebDriver instance
+     * @param locator By locator for the element
+     * @param text Text to enter
+     * @param clearFirst Whether to clear the field first
+     */
+    public static void sendData(WebDriver driver, By locator, String text, boolean clearFirst) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+
+            if (clearFirst) {
+                element.clear();
+            }
+
+            element.sendKeys(text);
+        } catch (TimeoutException e) {
+            throw e;
+        } catch (Exception e) {
+            LogsUtils.error("Failed to type text into element: " + locator + " - " + e.getMessage());
+            throw e;
+        }
     }
 
-    public static void sendData(WebDriver driver, By locator, String data) {
-        new WebDriverWait(driver, Duration.ofSeconds(30))
-                .until(ExpectedConditions.visibilityOfElementLocated(locator));
-        driver.findElement(locator).sendKeys(data);
+
+    /**
+     * Helper method to scroll to an element
+     * Used internally by clickingOnElement
+     */
+    private static void scrollToElement(WebDriver driver, By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
+            // Small pause to allow smooth scrolling
+            Thread.sleep(300);
+        } catch (Exception e) {
+            LogsUtils.error("Failed to scroll to element: " + locator + " - " + e.getMessage());
+        }
+    }
+    public static void assertThat(WebDriver driver, By locator, String expectedText) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+
+            boolean isTextMatched = wait.until(ExpectedConditions.textToBe(locator, expectedText));
+
+            if (!isTextMatched) {
+                throw new TimeoutException("Text did not match: Expected [" + expectedText + "]");
+            }
+
+            driver.findElement(locator);
+        } catch (TimeoutException e) {
+            LogsUtils.error("Timeout waiting for text [" + expectedText + "] on element: " + locator);
+            throw e;
+        } catch (Exception e) {
+            LogsUtils.error("Error waiting for text on element: " + locator + " - " + e.getMessage());
+            throw e;
+        }
     }
 
     public static String getText(WebDriver driver, By locator) {

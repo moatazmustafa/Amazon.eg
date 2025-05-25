@@ -1,5 +1,6 @@
 package Tests;
 
+import BaseTest.BaseTest;
 import Pages.AdminPage;
 import Pages.BasePage;
 import Pages.SSRegistrationPage;
@@ -16,53 +17,22 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class RegistrationTest extends BasePage{
+public class RegistrationTest extends BaseTest {
     private static final Logger log = LoggerFactory.getLogger(RegistrationTest.class);
-
-    WebDriver driver;
+    // Page Objects
     SSRegistrationPage SSRegistrationPage;
     AdminPage adminPage;
 
-    @BeforeTest
-    public void prepare() {
-        WebDriverManager.chromedriver().setup();
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--window-size=1920,1080");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-blink-features=AutomationControlled");
-        options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--remote-allow-origins=*");
-        options.addArguments("--disable-extensions");
-        options.addArguments("--start-maximized");
-        options.addArguments("--disable-cache");
-        options.addArguments("--incognito"); // Enable incognito mode
-
-        driver = new ChromeDriver(options);
-        driver.manage().deleteAllCookies();
-
+    @Test
+    public void testRegistrationFlow() throws InterruptedException {
         // Initialize Page Objects
         SSRegistrationPage = new SSRegistrationPage(driver);
         adminPage = new AdminPage(driver);
 
-    }
-
-    @AfterTest
-    public void teardown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
-
-    @Test
-    public void testRegistrationFlow() throws InterruptedException {
         log.info("Starting Registration Test");
         // Step 1: Navigate to Registration Page
         log.info("Navigating to Registration Page");
-        BasePage.openUrl("https://rstore.raneen.com/ss_zayed/smartstore/screen/setup");
+        driver.get("https://rstore.raneen.com/ss_zayed/smartstore/screen/setup");
         log.info("Setup Registration Screen");
         SSRegistrationPage.selectScreenType("التسجيل");
         SSRegistrationPage.enterIdentifier("motaz registration");
@@ -114,21 +84,22 @@ public class RegistrationTest extends BasePage{
         log.info("Clear Search Field");
         Utility.findWebElement(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[2]/div[1]/div[2]/input")).clear();
         log.info("Enter The Random Phone Number");
-        Utility.sendData(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[2]/div[1]/div[2]/input"), randomPhoneNumber);
-        Thread.sleep(15000);
+        Utility.sendData(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[2]/div[1]/div[2]/input"), randomPhoneNumber, true);
+      //  Thread.sleep(15000);
         log.info("Click On Search Button");
         Utility.clickingOnElement(driver, By.xpath("//div[2]/div/div[2]/button")); // Search
-        Thread.sleep(5000);
+      //  Thread.sleep(5000);
 
         // Open Customer Details
-        Thread.sleep(10000);
-        Utility.findWebElement(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[4]/table/tbody/tr[2]/td[20]/a")); // click on edit
+       // Thread.sleep(10000);
+        Utility.assertThat(driver,By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[4]/table/tbody/tr[2]/td[3]/div"),"moataz mustafa" );
+      //  Utility.findWebElement(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[4]/table/tbody/tr[2]/td[20]/a")); // click on edit
         log.info("Open Customer Details");
         Utility.clickingOnElement(driver, By.xpath("/html/body/div[2]/main/div[2]/div/div/div[2]/div[4]/table/tbody/tr[2]/td[20]/a")); // Open customer details
-        Thread.sleep(3000);
+      //  Thread.sleep(3000);
         log.info("Delete Customer");
         Utility.clickingOnElement(driver, By.xpath("//button[3]/span")); // Action
-        Thread.sleep(3000);
+      //  Thread.sleep(3000);
         log.info("Save");
         Utility.clickingOnElement(driver, By.xpath("//footer/button[2]/span")); // Save or confirm
         log.info("Test Completed Successfully");

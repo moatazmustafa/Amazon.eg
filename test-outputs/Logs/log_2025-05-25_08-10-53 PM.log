@@ -1,0 +1,18 @@
+[INFO] 25-05-2025 20:10:53 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: setUp
+[INFO] 25-05-2025 20:10:53 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:14)] - ✅ Test started: testRegistrationFlow
+[ERROR] 25-05-2025 20:11:03 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:11:04 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:11:26 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:11:27 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:11:31 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:11:32 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:11:32 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:11:42 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:11:45 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:38)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:11:55 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.2
+[ERROR] 25-05-2025 20:12:11 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:12:12 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[ERROR] 25-05-2025 20:12:23 [TestNG-test-Raneen Cloud Tests-1] [Utilities.Utility.clickingOnElement(Utility.java:34)] - Retry sleep interrupted.1
+[INFO] 25-05-2025 20:12:23 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: testRegistrationFlow
+[INFO] 25-05-2025 20:12:23 [TestNG-test-Raneen Cloud Tests-1] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:19)] - ✅ Test passed: testRegistrationFlow
+[INFO] 25-05-2025 20:12:23 [TestNG-test-Raneen Cloud Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown

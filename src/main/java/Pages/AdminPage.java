@@ -20,8 +20,8 @@ public class AdminPage extends BasePage {
     }
 
     public void login(String username, String password) {
-        Utility.sendData(driver,usernameField, username);
-        Utility.sendData(driver,passwordField, password);
+        Utility.sendData(driver,usernameField, username, true);
+        Utility.sendData(driver,passwordField, password,true);
 //        sendKeys(usernameField, username);
 //        sendKeys(passwordField, password);
         Utility.clickingOnElement(driver,loginButton);

@@ -26,15 +26,15 @@ public class SSRegistrationPage extends BasePage {
     }
 
     public void enterIdentifier(String identifier) {
-        Utility.sendData(driver, identifierField, identifier);
+        Utility.sendData(driver, identifierField, identifier,true);
     }
 
     public void enterPassword(String password) {
-        Utility.sendData(driver, passwordField, password);
+        Utility.sendData(driver, passwordField, password,true);
     }
 
     public void enterPhone(String phone) {
-        Utility.sendData(driver, phoneField, phone);
+        Utility.sendData(driver, phoneField, phone,true);
     }
 
     public void submitForm() {
@@ -50,14 +50,14 @@ public class SSRegistrationPage extends BasePage {
     }
 
     public void enterOtp(String otp) {
-        Utility.sendData(driver, otpField, otp);
+        Utility.sendData(driver, otpField, otp,true);
     }
 
     public void enterFirstName(String firstName) {
-        Utility.sendData(driver, firstNameField, firstName);
+        Utility.sendData(driver, firstNameField, firstName,true);
     }
 
     public void enterLastName(String lastName) {
-        Utility.sendData(driver, lastNameField, lastName);
+        Utility.sendData(driver, lastNameField, lastName,true);
     }
 }

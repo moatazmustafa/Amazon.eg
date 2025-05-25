@@ -26,23 +26,23 @@ public class SellAtRaneenPage extends BasePage {
 
     // Methods to interact with elements
     public void enterSellerName(String sellerName) {
-        Utility.sendData(driver, sellerNameField, sellerName);
+        Utility.sendData(driver, sellerNameField, sellerName,true);
     }
 
     public void enterPhone(String phone) {
-        Utility.sendData(driver, phoneField, phone);
+        Utility.sendData(driver, phoneField, phone,true);
     }
 
     public void enterEmail(String email) {
-        Utility.sendData(driver, emailField, email);
+        Utility.sendData(driver, emailField, email,true);
     }
 
     public void enterNationalID(String nationalID) {
-        Utility.sendData(driver, nationalIDField, nationalID);
+        Utility.sendData(driver, nationalIDField, nationalID,true);
     }
 
     public void enterCompanyName(String companyName) {
-        Utility.sendData(driver, companyNameField, companyName);
+        Utility.sendData(driver, companyNameField, companyName,true);
     }
 
     public void termsCheckbox() {

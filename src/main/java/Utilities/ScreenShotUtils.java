@@ -1,3 +1,4 @@
+
 package Utilities;
 
 import io.qameta.allure.Allure;
@@ -11,8 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
-public class ScreenShotUtils {
+public class ScreenShotUtils{
 
     private static final String SCREENSHOT_DIR = "test-outputs/Screenshots/";
 

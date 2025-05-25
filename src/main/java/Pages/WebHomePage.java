@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 
 public class WebHomePage extends BasePage {
 
-
     // Locators
     private By allCategories = By.cssSelector("#ammenu-header-container > div.header.content > button");
     private By menuTap = By.cssSelector("#ammenu-sidebar > ul.ammenu-tabs-list > li:nth-child(1) > button");
