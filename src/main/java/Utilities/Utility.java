@@ -16,11 +16,6 @@ public class Utility {
     private static final int DEFAULT_TIMEOUT = 10;
     private static final int DEFAULT_MAX_RETRIES = 15;
 
-    /**
-     * Click on an element with retry logic and proper waits
-     * @param driver WebDriver instance
-     * @param locator By locator for the element
-     */
     public static void clickingOnElement(WebDriver driver, By locator) {
         final int maxRetries = DEFAULT_MAX_RETRIES;
 
@@ -56,12 +51,6 @@ public class Utility {
     }
 
 
-    /**
-     * Find a WebElement with proper waits
-     * @param driver WebDriver instance
-     * @param locator By locator for the element
-     * @return WebElement if found
-     */
     public static WebElement findWebElement(WebDriver driver, By locator) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
@@ -75,13 +64,6 @@ public class Utility {
         }
     }
 
-    /**
-     * Type text into an input field with clear and validation
-     * @param driver WebDriver instance
-     * @param locator By locator for the element
-     * @param text Text to enter
-     * @param clearFirst Whether to clear the field first
-     */
     public static void sendData(WebDriver driver, By locator, String text, boolean clearFirst) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
@@ -100,11 +82,6 @@ public class Utility {
         }
     }
 
-
-    /**
-     * Helper method to scroll to an element
-     * Used internally by clickingOnElement
-     */
     private static void scrollToElement(WebDriver driver, By locator) {
         try {
             WebElement element = driver.findElement(locator);
@@ -186,11 +163,6 @@ public class Utility {
         return nationalID.toString();
     }
 
-    /**
-     * Generates a random email address ending with "@gmail.com".
-     *
-     * @return A random email address.
-     */
     public static String generateRandomEmail() {
         String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // Allowed characters for email prefix
         StringBuilder emailPrefix = new StringBuilder();

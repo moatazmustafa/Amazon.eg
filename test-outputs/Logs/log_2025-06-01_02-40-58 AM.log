@@ -1,0 +1,2 @@
+[INFO] 01-06-2025 02:40:58 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: setUp
+[INFO] 01-06-2025 02:40:58 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:14)] - ✅ Test started: testSuccessfulLogin

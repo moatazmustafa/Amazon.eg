@@ -1,0 +1,10 @@
+[ERROR] 01-06-2025 02:16:20 [main] [Utilities.Utility.findWebElement(Utility.java:62)] - Error finding element: By.cssSelector: //input[@id='continue' and @type='submit'] - invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=137.0.7151.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57616a83a79760faa381dbd3b4b2ec4e, findElement {using=css selector, value=//input[@id='continue' and @type='submit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.55, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: /var/folders/xt/k0h8xxyj0sg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54151}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54151/devtoo..., se:cdpVersion: 137.0.7151.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 57616a83a79760faa381dbd3b4b2ec4e
+[ERROR] 01-06-2025 02:16:21 [main] [Utilities.ScreenShotUtils.takeScreenshotOnFailure(ScreenShotUtils.java:30)] - 📸 Screenshot saved: test-outputs/Screenshots/testValidForgetPasswordFlow_20250601_021620.png

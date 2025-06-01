@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Raneen Suite" parallel="methods" thread-count="5">
+<suite name="Amazon Suite">
     <!-- TestNG Listeners -->
     <listeners>
         <listener class-name="Listeners.ITestResultListenerClass"/>
@@ -8,13 +8,12 @@
     </listeners>
 
     <!-- Test Definition -->
-    <test name="Raneen Cloud Tests">
+    <test name="Amazon Tests">
         <classes>
-            <!-- Include specific methods for a test class -->
-
-            <class name="Tests.RegistrationTest"/>
-
-
+            <class name="Tests.SignInTest"/>
+            <class name="Tests.SignUpTest"/>
+            <class name="Tests.ForgetPasswordTest"/>
+            <class name="Tests.CategoryAndProductTest"/>
         </classes>
-    </test> <!-- Raneen Cloud Tests -->
-</suite> <!-- Raneen Suite -->
+    </test> <!-- Amazon Tests -->
+</suite> <!-- Amazon Suite -->

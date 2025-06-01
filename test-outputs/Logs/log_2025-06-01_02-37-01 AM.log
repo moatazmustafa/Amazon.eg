@@ -1,0 +1,12 @@
+[INFO] 01-06-2025 02:37:01 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: setUp
+[INFO] 01-06-2025 02:37:01 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:14)] - ✅ Test started: testSuccessfulSignUp
+[INFO] 01-06-2025 02:37:08 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: testSuccessfulSignUp
+[INFO] 01-06-2025 02:37:08 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:19)] - ✅ Test passed: testSuccessfulSignUp
+[INFO] 01-06-2025 02:37:08 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown
+[INFO] 01-06-2025 02:37:09 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: setUp
+[INFO] 01-06-2025 02:37:09 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:14)] - ✅ Test started: testSignUpWithInvalidPhoneNumber
+[INFO] 01-06-2025 02:37:14 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: testSignUpWithInvalidPhoneNumber
+[INFO] 01-06-2025 02:37:14 [main] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:19)] - ✅ Test passed: testSignUpWithInvalidPhoneNumber
+[INFO] 01-06-2025 02:37:14 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown
+[INFO] 01-06-2025 02:37:14 [main] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: setUp
+[INFO] 01-06-2025 02:37:14 [main] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:14)] - ✅ Test started: testSignUpWithShortPasswordAndMismatch

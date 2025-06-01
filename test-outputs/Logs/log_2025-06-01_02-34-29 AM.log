@@ -1,0 +1,38 @@
+[INFO] 01-06-2025 02:34:29 [TestNG-test-Amazon Tests-2] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: setUp
+[INFO] 01-06-2025 02:34:29 [TestNG-test-Amazon Tests-2] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:14)] - ✅ Test started: testValidForgetPasswordFlow
+[INFO] 01-06-2025 02:34:41 [TestNG-test-Amazon Tests-2] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: testValidForgetPasswordFlow
+[INFO] 01-06-2025 02:34:41 [TestNG-test-Amazon Tests-2] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:19)] - ✅ Test passed: testValidForgetPasswordFlow
+[INFO] 01-06-2025 02:34:41 [TestNG-test-Amazon Tests-2] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown
+[INFO] 01-06-2025 02:34:41 [TestNG-test-Amazon Tests-2] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: setUp
+[INFO] 01-06-2025 02:34:41 [TestNG-test-Amazon Tests-2] [Listeners.ITestResultListenerClass.onTestStart(ITestResultListenerClass.java:14)] - ✅ Test started: testSignUpWithShortPasswordAndMismatch
+[INFO] 01-06-2025 02:34:43 [TestNG-test-Amazon Tests-4] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: testSuccessfulSignUp
+[INFO] 01-06-2025 02:34:43 [TestNG-test-Amazon Tests-4] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:19)] - ✅ Test passed: testSuccessfulSignUp
+[ERROR] 01-06-2025 02:34:49 [TestNG-test-Amazon Tests-2] [Utilities.Utility.findWebElement(Utility.java:62)] - Error finding element: By.xpath: //span[contains(text(),'الحساب والقوائم')] - Error communicating with the remote browser. It may have died.
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73453a7c4a54d917d4760b4378f8c873, findElement [using, value]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.55, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: /var/folders/xt/k0h8xxyj0sg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59023}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59023/devtoo..., se:cdpVersion: 137.0.7151.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 73453a7c4a54d917d4760b4378f8c873
+[ERROR] 01-06-2025 02:34:49 [TestNG-test-Amazon Tests-2] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - ❌ Method failed: testSignUpWithShortPasswordAndMismatch
+[INFO] 01-06-2025 02:34:49 [TestNG-test-Amazon Tests-2] [Listeners.ITestResultListenerClass.onTestFailure(ITestResultListenerClass.java:29)] - ❌ Test failed: testSignUpWithShortPasswordAndMismatch
+[ERROR] 01-06-2025 02:34:49 [TestNG-test-Amazon Tests-2] [Utilities.ScreenShotUtils.takeScreenshotOnFailure(ScreenShotUtils.java:37)] - ❌ Unexpected error while capturing screenshot: Error communicating with the remote browser. It may have died.
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73453a7c4a54d917d4760b4378f8c873, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.55, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: /var/folders/xt/k0h8xxyj0sg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59023}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59023/devtoo..., se:cdpVersion: 137.0.7151.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 73453a7c4a54d917d4760b4378f8c873
+[INFO] 01-06-2025 02:34:49 [TestNG-test-Amazon Tests-4] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown
+[INFO] 01-06-2025 02:34:49 [TestNG-test-Amazon Tests-2] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown
+[INFO] 01-06-2025 02:34:56 [TestNG-test-Amazon Tests-3] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: testCategoryToProductFlow
+[INFO] 01-06-2025 02:34:56 [TestNG-test-Amazon Tests-3] [Listeners.ITestResultListenerClass.onTestSuccess(ITestResultListenerClass.java:19)] - ✅ Test passed: testCategoryToProductFlow
+[INFO] 01-06-2025 02:34:56 [TestNG-test-Amazon Tests-3] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown
+[ERROR] 01-06-2025 02:35:18 [TestNG-test-Amazon Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - ❌ Method failed: testSuccessfulLogin
+[INFO] 01-06-2025 02:35:18 [TestNG-test-Amazon Tests-1] [Listeners.ITestResultListenerClass.onTestFailure(ITestResultListenerClass.java:29)] - ❌ Test failed: testSuccessfulLogin
+[ERROR] 01-06-2025 02:35:18 [TestNG-test-Amazon Tests-1] [Utilities.ScreenShotUtils.takeScreenshotOnFailure(ScreenShotUtils.java:30)] - 📸 Screenshot saved: test-outputs/Screenshots/testSuccessfulLogin_20250601_023518.png
+[INFO] 01-06-2025 02:35:18 [TestNG-test-Amazon Tests-1] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown
+[ERROR] 01-06-2025 02:35:28 [TestNG-test-Amazon Tests-5] [Utilities.Utility.clickingOnElement(Utility.java:44)] - Timeout waiting for element to be clickable: By.linkText: ابدأ من هنا.
+[ERROR] 01-06-2025 02:35:28 [TestNG-test-Amazon Tests-5] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:25)] - ❌ Method failed: testSignUpWithInvalidPhoneNumber
+[INFO] 01-06-2025 02:35:28 [TestNG-test-Amazon Tests-5] [Listeners.ITestResultListenerClass.onTestFailure(ITestResultListenerClass.java:29)] - ❌ Test failed: testSignUpWithInvalidPhoneNumber
+[INFO] 01-06-2025 02:35:28 [TestNG-test-Amazon Tests-5] [Listeners.IInvokedMethodListenerClass.afterInvocation(IInvokedMethodListenerClass.java:24)] - ✅ Method passed: tearDown

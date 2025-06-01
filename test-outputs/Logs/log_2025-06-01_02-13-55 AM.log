@@ -1,0 +1,2 @@
+[ERROR] 01-06-2025 02:13:55 [main] [Utilities.Utility.clickingOnElement(Utility.java:44)] - Timeout waiting for element to be clickable: By.xpath: input.a-button-input[aria-labelledby='whatsapp-button-announce']
+[ERROR] 01-06-2025 02:13:55 [main] [Utilities.ScreenShotUtils.takeScreenshotOnFailure(ScreenShotUtils.java:30)] - 📸 Screenshot saved: test-outputs/Screenshots/testValidForgetPasswordFlow_20250601_021355.png
