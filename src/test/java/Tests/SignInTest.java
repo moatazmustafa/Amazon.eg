@@ -32,7 +32,7 @@ public class SignInTest extends BaseTest {
         signInPage.enterPasswordAndLogin("111111"); // Replace with real password
 
         log.info("Step 4: Asserting successful login.");
-//        signInPage.assertvalidLogInMessage(); // Replace with expected user name or greeting
+        signInPage.assertvalidLogInMessage(); // Replace with expected user name or greeting
 
         log.info("Positive Login Test completed successfully ✅");
     }
